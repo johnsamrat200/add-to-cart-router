@@ -41,10 +41,10 @@ const CartPage = () => {
               {cart.map(item => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-between border-b pb-4"
+                  className="flex flex-wrap  items-center justify-between border-b pb-4"
                 >
                   {/* Product Info */}
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 p-2.5">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -57,7 +57,7 @@ const CartPage = () => {
                   </div>
 
                   {/* Quantity Controls */}
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 p-2.5">
                     <button
                       onClick={() => updateQuantity(item.id, -1)}
                       className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
@@ -74,7 +74,7 @@ const CartPage = () => {
                   </div>
 
                   {/* Price & Remove */}
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 p-2.5">
                     <span className="font-semibold text-gray-700">
                       ${(item.price * item.quantity).toFixed(2)}
                     </span>
